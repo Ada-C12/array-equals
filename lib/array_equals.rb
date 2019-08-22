@@ -16,10 +16,6 @@ def array_equals(array1, array2)
     equal_array << 1 if !equal
   end
   
-  if equal_array.length == 0
-    return true
-  else
-    return false
-  end
+  (equal_array.length == 0) ? (return true) : (return false)
   
 end
