@@ -2,17 +2,13 @@
 # and the same integer values in the same exact order
 def array_equals(array1, array2)
   # check if arrays are nil
-  # is there a shorter way to do this?
-  if array1 == nil && array1 == array2
-    return true
-  elsif array2 == nil && array2 != array1
-    return false
-  elsif array1 == nil && array1 != array2
-    return false
+  if array1 == nil || array2 == nil
+    return array1 == nil && array2 == nil ? true : false
   end
-
+  # check elements at each index value
   array1.each_with_index do |element, index|
     return false unless array1[index] == array2[index]
   end
+  # check array lengths
   return array1.length == array2.length ? true : false
 end
