@@ -20,4 +20,5 @@ def array_equals(array1, array2)
     end
   end
   return true
+  raise NotImplementedError
 end
