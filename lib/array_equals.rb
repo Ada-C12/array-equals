@@ -1,5 +1,3 @@
-# Determines if the two input arrays have the same count of elements
-# and the same integer values in the same exact order
 def array_equals(array1, array2)
   if array1 == nil && array2 == nil
     return true
@@ -17,6 +15,3 @@ def array_equals(array1, array2)
   end
   return false
 end
-
-
-# puts array_equals([10, 20, 30, 40, 50, 60], [20, 3, 50, 10, 68, 74])
