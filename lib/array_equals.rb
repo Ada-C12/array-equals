@@ -1,10 +1,10 @@
 
 def array_equals(first_array, second_array)
   
-  if (first_array.nil? && !second_array.nil?) || (second_array.nil? && !first_array.nil?)
-    return false
-  elsif second_array.nil? && first_array.nil?
+  if second_array.nil? && first_array.nil?
     return true
+  elsif first_array.nil? || second_array.nil?
+    return false
   end
   
   if first_array.length != second_array.length
