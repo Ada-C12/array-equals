@@ -1,6 +1,9 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/array_equals'
+require 'pry'
+
+Minitest::Reporters.use!
 
 describe "array equals" do
   describe "basic tests" do
@@ -21,7 +24,7 @@ describe "array equals" do
     it "arrays not equal: same count of elements" do
       array1 = [10, 20, 30, 40, 50, 60]
       array2 = [20, 3, 50, 10, 68, 74]
-
+      
       array_equals(array1, array2).must_equal false
     end
   end
