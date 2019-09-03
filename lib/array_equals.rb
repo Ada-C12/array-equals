@@ -1,5 +1,23 @@
-# Determines if the two input arrays have the same count of elements
-# and the same integer values in the same exact order
+
 def array_equals(array1, array2)
-  raise NotImplementedError
+  i = 0 
+  boolean_value = true 
+
+  if array1 == nil && array2 == nil
+    boolean_value = true
+  elsif array1 == nil && array2 != nil
+    boolean_value = false
+  elsif array1 != nil && array2 == nil
+    boolean_value = false
+  elsif array1.length == array2.length 
+    array1.each do |integer|
+      if integer != array2[i]
+        boolean_value = false
+      end 
+    i += 1 
+    end
+  else boolean_value = false 
+  end 
+  return boolean_value 
 end
+
