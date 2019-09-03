@@ -2,6 +2,14 @@
 # and the same integer values in the same exact order
 
 def array_equals(array1, array2)
+  if array1 == nil && array2 == nil
+    return true
+  elsif array1 == nil && array2 != nil
+    return false
+  elsif array1 != nil && array2 == nil
+    return false
+  end
+
   if array1.length != array2.length
     return false
   end
@@ -12,6 +20,4 @@ def array_equals(array1, array2)
   end
   return true
 end
-
-array_equals(array1, array2)
 
