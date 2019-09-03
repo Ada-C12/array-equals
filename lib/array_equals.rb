@@ -13,8 +13,5 @@ def array_equals(array1, array2)
   return true
 end
 
-array1 = %w[l i n z e a]
-array2 = %w[l i n n e a]
-
 array_equals(array1, array2)
 
