@@ -1,22 +1,20 @@
 # Determines if the two input arrays have the same count of elements
 # and the same integer values in the same exact order
 
-def arraysAreEqual?(input_array1, input_array2)
-  if input_array1.length == input_array2.length
-    input_array1.each_with_index do |char, i|
-      if input_array1[i] == input_array2[i]
-        puts char
-      else
-        puts "false"
-      end
+def array_equals(array1, array2)
+  if array1.length != array2.length
+    return false
+  end
+  array1.each_with_index do |char, i|
+    if array1[i] != array2[i]
+      return false
     end
-  else
-    puts "the arrays are different lengths"
-  end     
-
+  end
+  return true
 end
 
 array1 = %w[l i n z e a]
 array2 = %w[l i n n e a]
 
-arraysAreEqual?(array1, array2)
+array_equals(array1, array2)
+
