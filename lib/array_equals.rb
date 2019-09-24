@@ -18,5 +18,5 @@ def array_equals(array1, array2)
       return false
     end 
     return true
-  end 
+  end
 end
